@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #00c6ff 0%, #007C50 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container{
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 30px;
+    color: #333333;
+    font-size: 1.8em;
+}
+
+.converter-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.currency-row{
+    display: flex;
+    gap: 15px;
+    align-items: end;
+}
+
+.currency-input{
+    flex: 2;
+}
+
+.currency-select{
+    flex: 1;
+}
+
+input, select{
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    width: 100%;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus{
+    border-color: #667eea;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    transform: translateY(-2px)
+}
+
+label{
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555555;
+    display: block;
+    text-align: left;
+}
+
+.converter-btn{
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.converter-btn:hover{
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px);
+}
+
+.loading{
+    margin-top: 20px;
+    display: none;
+}
+
+.spinner{
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 0 auto;
+    animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.info{
+    margin-top: 30px;
+    font-size: 12px;
+    color: #666;
+}
